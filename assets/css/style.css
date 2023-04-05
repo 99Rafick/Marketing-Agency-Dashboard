@@ -7,13 +7,20 @@
     --blue-color: #38caf7;
     --primary-light-color: #e85618cb;
     --light-color: #b3b3b3;
+    --theme: white;
+    --black: #000;
+    --black-light: #3a3a3a;
 }
 
 
+
 .dark{
-    --primary-color: ;
     --secondary-color: ;
-    --bg-theme: #eee;
+    --bg-theme: #1d1d1d;
+    --theme: black;
+    --light-color: #dddcdc;
+    --black: #b3b3b3;
+    --black-light: #dddcdc;
 }
 
 
@@ -53,7 +60,7 @@ body .container{
 
 
 body .container aside{
-    background-color: white;
+    background-color: var(--theme);
     display: grid;
     grid-template-rows: 30% 55% 15%;
     overflow: hidden;
@@ -71,6 +78,7 @@ body .container aside{
 
 .container aside .profil h2{
     font-size: 1.1em;
+    color: var(--black);
 }
 
 .container aside .profil p{
@@ -95,43 +103,85 @@ body .container aside{
     content: '';
     top: 7px;
     right: 7px;
-    width: 12px;
-    height: 12px;
+    width: 9px;
+    height: 9px;
     border-radius: 50%;
+    border: 2px solid #eee;
     background-color: red;
 }
 
 
 .container aside .aside-nav{
     position: relative;
-    background-color: white;
 
 }
 
 
 .container aside .aside-nav ul{
-    background-color: white;
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
 }
 
+.container aside .aside-nav .glisse{
+    position: absolute;
+    top: 0;
+    left: 40px;
+    width: 100%;
+    height: 50px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: var(--bg-theme);
+    z-index: 1;
+    transition:  transform 0.2s;
+}
 
+.container aside .aside-nav .glisse::before{
+    position: absolute;
+    content: '';
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    top: -35px;
+    right: 40px;
+    border-radius: 50%;
+    box-shadow: 20px 20px 0px var(--bg-theme);
+    z-index: -1;
+}
+
+.container aside .aside-nav .glisse::after{
+    position: absolute;
+    content: '';
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    bottom: -35px;
+    right: 40px;
+    border-radius: 50%;
+    box-shadow: 20px 20px 0px var(--bg-theme);
+    z-index: -1;
+    transform: rotate(-90deg);
+}
 
 .container aside .aside-nav ul li{
     height: 50px;
     width: 180px;
-    font-size: 1.15em;
+    font-size: 1.1em;
     display: flex;
     align-items: center;
     gap: 10px;
     letter-spacing: 1px;
     z-index: 2;
     padding-left: 15px;
+    cursor: pointer;
     
 }
 
+
+.container aside .aside-nav ul li.active a{
+    color: var(--primary-color);
+}
 
 .container aside .aside-nav ul li a{
     color: var(--light-color);
@@ -225,7 +275,7 @@ body .container aside{
 .container main .header form button{
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 10px;
     width: 40px;
     height: 40px;
     font-size: 1.05em;
@@ -238,8 +288,29 @@ body .container aside{
 
 .container main .header .members{
     width: 250px;
+    display: flex;
+    justify-content: flex-end;
 }
 
+
+.container main .header .members span{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(114, 114, 114);
+    display: inline-block;
+    margin-left: -12px;
+}
+
+
+.container main .header .members span:last-child{
+    background-color: var(--black-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--bg-theme);
+    font-size: 1.3em;
+}
 
 .container main .hero-navigation{
     width: 100%;
@@ -258,6 +329,7 @@ body .container aside{
     position: relative;
     font-size: 1.2em;
     font-weight: bold;
+    color: var(--black);
 }
 
 .container main .hero-navigation ul li::before{
