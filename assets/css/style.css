@@ -183,7 +183,6 @@ body .container aside{
 .container aside .aside-nav ul li{
     height: 50px;
     width: 180px;
-    font-size: 1.1em;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -274,7 +273,7 @@ body .container aside{
 
 .container main .header form{
     width: max-content;
-    height: 50px;
+    height: 45px;
     position: relative;
 }
 
@@ -292,13 +291,13 @@ body .container aside{
     position: absolute;
     top: 50%;
     right: 10px;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     font-size: 1.05em;
     color: white;
     border:  none;
     background-color: var(--primary-light-color);
-    transform: translateY(-50%);
+    transform: translateY(-51%);
     border-radius: 50%;
 }
 
@@ -310,12 +309,13 @@ body .container aside{
 
 
 .container main .header .members span{
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background-color: rgb(114, 114, 114);
     display: inline-block;
     margin-left: -12px;
+    border: 1px solid red;
 }
 
 
@@ -343,7 +343,7 @@ body .container aside{
 
 .container main .hero-navigation ul li{
     position: relative;
-    font-size: 1.2em;
+    font-size: 1.05em;
     font-weight: bold;
     color: var(--black);
 }
@@ -373,7 +373,7 @@ body .container aside{
 .container main .hero-navigation .filter{
     position: relative;
     width: 220px;
-    height: 50px;
+    height: 45px;
     border-radius: 15px;
     background-color: #f1f1f1;
     display: flex;
@@ -456,7 +456,8 @@ body .container aside{
 .container main .main-content .section .content-child{
     transition:  0.3s ease-in;
     transform-style: preserve-3d;
-    
+    transform: rotate(0) rotateY(-72deg);
+    opacity: 0;
 }
 
 .container main .main-content .section.inactive .content-child{
@@ -472,26 +473,11 @@ body .container aside{
 } 
 
 
-/* @keyframes animate {
-    0%{
-        transform: rotateX(0) rotateY(-72deg);
-        opacity: 0.1;
-    }
-
-    0%{
-        transform: rotateX(0) rotateY(0deg);
-        opacity: 1;
-    }
-} */
-
-
-
-
 .container main .main-content .section .content-child{
     background-color: rgba(53, 53, 53, 0.171);
     backdrop-filter: blur(10px);
     border-radius: 20px;
-    height: 220px;
+    height: 190px;
 }
 
 

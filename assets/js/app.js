@@ -53,10 +53,10 @@ navLinks.forEach((element, k) => {
         let section = Sections[k].parentNode.querySelector('.active');
         section.classList.remove('active');
         let inactive = Sections[k].parentNode.querySelector('.inactive');
+        section.classList.add('inactive');
         if(inactive != null){
             inactive.classList.remove('inactive');
         }
-        section.classList.add('inactive');
         
         Sections[k].classList.add('active')
      
