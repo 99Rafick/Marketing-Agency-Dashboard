@@ -26,6 +26,7 @@ let filter = Selector('.filter');
 let navLinks = SelectorAll('.aside-nav ul li')
 let glisse = Selector('.glisse')
 let body = Selector('body')
+let Sections = SelectorAll('.main-content .section')
 
 
 AddClicked(filter);
@@ -41,11 +42,24 @@ navLinks.forEach((element, k) => {
     element.addEventListener('click', (e) => {
         let step = k
         glisse.style.transform = `translateY(${(step * 60)}px)`
-        console.log(step);
-        element.classList.add('active');
+
         let parent = element.parentNode.querySelector('.active')
         parent.classList.remove('active');
+        element.classList.add('active');
+
+
+
+
+        let section = Sections[k].parentNode.querySelector('.active');
+        section.classList.remove('active');
+        let inactive = Sections[k].parentNode.querySelector('.inactive');
+        if(inactive != null){
+            inactive.classList.remove('inactive');
+        }
+        section.classList.add('inactive');
         
+        Sections[k].classList.add('active')
+     
     }) 
 });
 
