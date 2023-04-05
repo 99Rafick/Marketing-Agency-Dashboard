@@ -484,3 +484,17 @@ body .container aside{
 .container main .main-content .section:nth-child(1) .content-child{
     background-color: rgba(82, 41, 41, 0.562);
 }
+
+
+.container main .main-content .section:nth-child(2) .content-child{
+    background-color: rgba(198, 233, 0, 0.562);
+}
+
+.container main .main-content .section:nth-child(3) .content-child{
+    background-color: rgba(236, 0, 0, 0.562);
+}
+
+
+.container main .main-content .section:nth-child(4) .content-child{
+    background-color: rgba(247, 91, 226, 0.562);
+}
