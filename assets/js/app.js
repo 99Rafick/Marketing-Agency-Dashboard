@@ -27,6 +27,7 @@ let navLinks = SelectorAll('.aside-nav ul li')
 let glisse = Selector('.glisse')
 let body = Selector('body')
 let Sections = SelectorAll('.main-content .section')
+let content = SelectorAll('.content-child')
 
 
 AddClicked(filter);
@@ -35,6 +36,8 @@ btnTheme.addEventListener('click', (e) => {
     btnTheme.classList.toggle('clicked');
     body.classList.toggle('dark')
 })
+
+
 
 
 
