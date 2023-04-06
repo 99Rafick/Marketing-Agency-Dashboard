@@ -67,3 +67,8 @@ navLinks.forEach((element, k) => {
 });
 
 
+
+
+content.forEach(element => {
+    AddClicked(element);
+})
