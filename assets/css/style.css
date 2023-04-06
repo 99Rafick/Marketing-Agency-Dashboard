@@ -201,6 +201,7 @@ body .container aside{
     display: flex;
     gap: 10px;
     font-weight: bold;
+    font-size: 0.9em;
 }
 
 .container aside .theme{
@@ -478,14 +479,14 @@ body .container aside{
 }
 
 .container main .main-content .section.inactive .content-child{
-    transform: rotateX(0) rotateY(72deg);
+    transform: rotateX(0) rotateY(-90deg);
     opacity: 0;
     z-index: 1;
 } 
 
 
 .container main .main-content .section.active .content-child{
-    transition-delay: 0.45s;
+    transition-delay: 0.65s;
     transform: rotateX(0) rotateY(0deg);
     opacity: 1;
     z-index: 10;
